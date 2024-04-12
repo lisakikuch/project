@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The weather company</title>
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -13,7 +15,7 @@
         <nav class="navbar navbar-expand-lg navbar-white bg-white">
             <div class="container"> 
                 <a class="navbar-brand" href="#">
-                    <img src="logo.png" width="40" height="40" alt="The Weather Company">
+                    <img src="https://s3-alpha-sig.figma.com/img/b44a/2bd6/b87000fb52fed5d6254914c02bac48d0?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QnfwaSYBcrm~jljR7doIdTEkHCJn9vPd-IHT1BW8Fm0r3VMrfs2utjS7ie1gBRSW6TAY-nZNVznRVm1-NDiPp16aMgoBl2SVluI1ihW7jjXsph6BfhpYA4sbVh8IuxUlmEoVsxJ76IzZmd-UMYKdA6PaN~kW4cu3kHkPxmXz27tks9cO9yTA0nqgz~IzNaQxfrkYoMB00STR9alJAa7Fk0-nwZg3Kr-sgSTf6NZPMnwdxa1WWTA-~C46j~fblWRnepEC51Uf6pOku1w5jzweCodxTG3fjtjCvIRppsAvoYYEUEpXliUBtw7rKA5j9G0BY5L50G7v4KrEuwXl35fyXA__" width="40" height="40" alt="The Weather Company">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,7 +41,7 @@
         <section class="card d-inline-flex">
             <div class="card-content">
                 <h4>Raining</h4>
-                <h2>16°C</h2>
+                <h2 class="Up-to-date-weather">16°C</h2>
             </div>
         </section>
         <section class="card d-inline-flex">
@@ -59,7 +61,7 @@
     </main>
     <footer class="bg-white text-dark py-4">
         <div class="container">
-            <div class="row justify-content-between">
+            <div>
                 <div class="col-md-3 mb-3 mb-md-0">
                     <ul class="list-unstyled">
                         <h5>The Weather Company Ltd.,</h5>
@@ -95,9 +97,11 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
