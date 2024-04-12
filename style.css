@@ -64,3 +64,71 @@
     margin-top: 0;
 }
 
+
+.main_page_background{
+    background-image: url(https://s3-alpha-sig.figma.com/img/bafb/3a8b/59215dd34483a2c44cba00bbe9be6c38?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bvAOBr68Zf4DNPCXIgkoK5wEcP0YSNAthZnBYC91RqhtWYUx-~7Cfq9I176Wl8rEha0k5YmWmGLwerNoQZ1996JAp~dbDh48Q3uB4v2VvpEQeDYcd9buAMRbvKTM~~lLvLDQZovbDTgKPd0jJBJilptKgmibnrNZxl54yvGgKIVqM~5ipLLC4AIp9GcUVlLC9sUoJPGOp~nlTj1MbrohifluytfcVZl7M3Hf7K8siVKe9dW8IczKDZ2bJ6ZjDICodJlh8Q64LNZYi1yTsg9gKmHM-S~x6gOqQFBBDr3owDyAFTl5NKcc62ed~e8zUopUD8pVI0RGWUmtMN6Dq3VWPQ__);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    user-select: none;
+    -moz-user-select: none;
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* margin-right: -100px;  */
+        /* Adjust margin to create overlapping effect */
+    z-index: 1; 
+    margin: 3rem;
+    padding: 2rem;
+    margin-right: 4rem;
+        /* Ensure the top card appears above others */
+}
+
+.card:nth-child(1) {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    left: 50px;
+}
+.card:nth-child(2) {
+    /* margin-right: -50px;  */
+        /* Adjust margin for the middle card */
+    z-index: 2; /* Ensure the middle card appears above the bottom card */
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    top: 124px;
+}
+
+.card:nth-child(3),
+.card:nth-child(4) {
+    /* margin-right: 0;  */
+        /* No margin for the last card */
+    z-index: 3; /* Ensure the bottom card appears below others */
+    background-color: rgba(155, 154, 154, 0.274);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    height: 15rem;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    width: 200px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+
