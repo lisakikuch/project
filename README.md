@@ -1,4 +1,4 @@
-<Project>
+<<Project>>
 Name: The Weather Company 
 Member: Alberto, Gian, Maheen, Lisa 
 
@@ -50,7 +50,7 @@ How to set up and run your project:
 
  
 
-<Contribution guidelines for team members>
+<<Contribution guidelines for team members>>
 Thank you for being interested in contributing to the project! To ensure a smooth collaboration, here are some guidelines for contributing and reporting bugs: 
 
 Reporting issues:
