@@ -1,4 +1,5 @@
-- Project -
+Project
+
 Name: The Weather Company 
 Member: Alberto, Gian, Maheen, Lisa 
 
@@ -48,9 +49,12 @@ How to set up and run your project:
   Bootstrap JavaScript Bundle: 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 
+
+
  
 
-- Contribution guidelines -
+Contribution guidelines
+
 Thank you for being interested in contributing to the project! To ensure a smooth collaboration, here are some guidelines for contributing and reporting bugs: 
 
 Reporting issues:
