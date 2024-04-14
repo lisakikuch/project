@@ -3,7 +3,7 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.7001&longitude=-79.416
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        document.querySelector('.Up-to-date-weather').innerText = JSON.stringify(data);
+        document.querySelector('.Up-to-date-weather').innerText = JSON.stringify(data.current.temperature_2m);
         //Line 41 on html file
     })
     .catch(error => console.error('Error fetching data:', error))
