@@ -3,8 +3,16 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.7001&longitude=-79.416
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        document.querySelector('.Up-to-date-weather').innerText = JSON.stringify(data.current.temperature_2m);
+        document.querySelector('#Up-to-date-weather').innerText = JSON.stringify(data.current.temperature_2m);
         //Line 41 on html file
     })
     .catch(error => console.error('Error fetching data:', error))
 
+fetch('http://worldtimeapi.org/api/timezone/America/Toronto')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        document.querySelector('#http://worldtimeapi.org/api/timezone/America/Toronto').innerText = JSON.stringify(data);
+        //Line 37 on html file
+    })
+    .catch(error => console.error('Error fetching data:', error))
