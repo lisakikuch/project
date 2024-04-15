@@ -7,6 +7,7 @@
     user-select: none;
     -moz-user-select: none;
 }
+
 .card {
     position: relative;
     width: 250px;
@@ -57,7 +58,10 @@
 }
 
 .card-content {
-    padding: 20px;
+    padding: 30px;
+    width: 180px;
+    /* padding-top: 200px;
+    padding-bottom: 200px; */
 }
 
 .card h2 {
