@@ -36,28 +36,30 @@
         <section class="card d-inline-flex">
             <div class="card-content">
                 <h2>Toronto</h2>
-                <h3>4:41pm</h3>
+                <h3 class="font-weight-bold" id="current-time"></h3>
               <p><img class="weather_icons" src="https://s3-alpha-sig.figma.com/img/989e/6329/389023bebc3135a2ece2f7e692e9bea9?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FlFsoq0lMoifzUtQAfCGQzllWPCe2-c1gdIEXe2btf21iw0FnHfbV4gFmtBmmWukZcBAbtkRf2Atcel854f0oRiVBOLRkecsmZKq4Mu3DqtRqwT0AdIfDqoNun3Sp1HVbLA1rt7taxS~hVjj9cNNjmh9dySyPWvGW3hNXU4lFPkUEAU-GTv8xIH-lCFmStqrJxjhi3aMVUdlXQGiH0kjryB2jfnEaq3pRRSxlauBc~d8EU262lS8utAqIrIAIrnN~eeGKKC801Kru63Z5EjvxUjNkcQJ-H1Iv1jGrD2vT6m7zaJVh8HFlDMh1WcABctrkdH6But1BUzBMDPrHrzZ0w__" style="width: 100px"></p>
             </div>
         </section>
         <section class="card d-inline-flex">
             <div class="card-content">
-                <h4>Raining</h4>
-                <h2 class="Up-to-date-weather">16°C</h2>
+                <h4>Sunny</h4>
+                <div class="row">
+                    <h2 style="font-size: 40px;" class="col font-weight-bold" id="Up-to-date-weather"></h2>
+                    <p class="col font-weight-bold" style="font-size: 40px;">°C</p>
+                </div>
+        </section>
+        <section class="card d-inline-flex">
+            <div class="card-content">
+                <h2>Sunrise</h2>
+                <div><img class="weather_icons" src="https://banner2.cleanpng.com/20180421/vcq/kisspng-sunrise-sunset-sky-sun-rise-5adb5aef626cb6.8525203515243251034032.jpg" style="width: 100px"></div>
+                <h2 id="Time_sunrise"></h2>
             </div>
         </section>
         <section class="card d-inline-flex">
             <div class="card-content">
-                <h2>9 am</h2>
-                <div><img class="weather_icons" src="https://s3-alpha-sig.figma.com/img/989e/6329/389023bebc3135a2ece2f7e692e9bea9?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FlFsoq0lMoifzUtQAfCGQzllWPCe2-c1gdIEXe2btf21iw0FnHfbV4gFmtBmmWukZcBAbtkRf2Atcel854f0oRiVBOLRkecsmZKq4Mu3DqtRqwT0AdIfDqoNun3Sp1HVbLA1rt7taxS~hVjj9cNNjmh9dySyPWvGW3hNXU4lFPkUEAU-GTv8xIH-lCFmStqrJxjhi3aMVUdlXQGiH0kjryB2jfnEaq3pRRSxlauBc~d8EU262lS8utAqIrIAIrnN~eeGKKC801Kru63Z5EjvxUjNkcQJ-H1Iv1jGrD2vT6m7zaJVh8HFlDMh1WcABctrkdH6But1BUzBMDPrHrzZ0w__" style="width: 100px"></div>
-                <h2>9°C</h2>
-            </div>
-        </section>
-        <section class="card d-inline-flex">
-            <div class="card-content">
-                <h2>10 am</h2>
-              <div><img class="weather_icons" src="https://s3-alpha-sig.figma.com/img/3abc/22cf/53e6f6e63c0ce53cc8bc6883be95f235?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qlJVTHE9C7aYLhyRnSQwAPCmri2W1f~HlNKxE3O7Ym9yaPvUH0OA25GyBvLH1qlUxQArFpJ-WcLA3lUV3xfteiilXcr3f2MA78yLJhyTykIe7vc9gg0ZQ9rvWaNR6fCnyWn9eY5nZyXFQUvySPFePa4XDwstEehipeMuNf5DLEAS3jw-NqnSBuSsLdmqqvg~sO-~MFO7WtbK4yMpu7qepnrAHg~kpcY55YHbVvFTy3aMr91c3-Jzvda4vxa~dmJyWj~Ga8bALcs~x5NItiA8NH6SSfKrGy2PbVW3H6mlcB8NMLXqdbMOCD6urLCiZM-15bOVX26z5Jk8XixBzgzgeg__" style="width: 100px"></div>
-                <h2>10°C</h2>
+                <h2>Sunset</h2>
+              <div><img class="weather_icons" src="https://banner2.cleanpng.com/20180614/svi/kisspng-sunset-computer-icons-clip-art-sunset-icon-5b2226bddd2160.6619788815289647979058.jpg" style="width: 100px"></div>
+                <h2 id="Time_sunset"></h2>
             </div>
         </section>
     </main>
