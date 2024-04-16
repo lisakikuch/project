@@ -2,30 +2,42 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=79.38&cur
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        document.querySelector('#Up-to-date-weather').innerText = JSON.stringify(data.current.temperature_2m);
+        document.querySelector('#Toronto_temperature').innerText = JSON.stringify(data.current.temperature_2m);
         //Line 41 on html file
     })
     .catch(error => console.error('Error fetching data:', error))
 
-    //Toronto's time for Sunrise
-fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
-    .then(response => response.json())
-    .then(data => {
-    console.log(data);
-    document.querySelector('#Time_sunrise').innerText = JSON.stringify(data.results.sunrise);
-    //Line 53 on html file
-})
-.catch(error => console.error('Error fetching data:', error))
+    //Toronto's time for Sunrise/Sunset
+    function fetchSunriseSunsetData() {
+        fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.querySelector('#Time_sunrise').innerText = data.results.sunrise;
+                document.querySelector('#Time_sunset').innerText = data.results.sunset;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }
+    
+    // Call the function to fetch sunrise and sunset data
+    fetchSunriseSunsetData();
+    
 
-//Toronto's time for Sunset
-fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
-    .then(response => response.json())
-    .then(data => {
-    console.log(data);
-    document.querySelector('#Time_sunset').innerText = JSON.stringify(data.results.sunset);
-    //Line 60 on html file
-})
-.catch(error => console.error('Error fetching data:', error))
+    function getCurrentWeekday() {
+        const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const currentDate = new Date();
+        const currentWeekday = weekdays[currentDate.getDay()];
+        return currentWeekday;
+    }
+    
+    // Function to update HTML element with current weekday
+    function updateCurrentWeekday() {
+        const today = getCurrentWeekday();
+        document.getElementById('current-weekday').textContent += today;
+    }
+    
+    // Call the function to update the HTML element with current weekday
+    updateCurrentWeekday();
 
 function updateTime() {
     var currentDate = new Date(); 
@@ -44,7 +56,8 @@ function updateTime() {
     //line 37 on the HTMl file
     currentTimeElement.textContent = currentTimeString;
     }
-    
+
+//jQuery    
 updateTime();
 setInterval(updateTime, 1000);
 
