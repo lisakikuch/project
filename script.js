@@ -27,26 +27,26 @@ fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
 })
 .catch(error => console.error('Error fetching data:', error))
 
-    function updateTime() {
-        var currentDate = new Date(); 
-        var hours = currentDate.getHours();
-        var minutes = currentDate.getMinutes();
-        var am_or_pm = hours >= 12 ? 'PM' : 'AM';
+function updateTime() {
+    var currentDate = new Date(); 
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var am_or_pm = hours >= 12 ? 'PM' : 'AM';
         
-        hours = hours % 12;
-        hours = hours ? hours : 12; 
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
         
-        hours = (hours < 10 ? "0" : "") + hours;
-        minutes = (minutes < 10 ? "0" : "") + minutes;
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
         
-        var currentTimeString = hours + ":" + minutes + " " + am_or_pm;
-        var currentTimeElement = document.getElementById("current-time");
-        //line 37 on the HTMl file
-        currentTimeElement.textContent = currentTimeString;
+    var currentTimeString = hours + ":" + minutes + " " + am_or_pm;
+    var currentTimeElement = document.getElementById("current-time");
+    //line 37 on the HTMl file
+    currentTimeElement.textContent = currentTimeString;
     }
     
-    updateTime();
-    setInterval(updateTime, 1000);
+updateTime();
+setInterval(updateTime, 1000);
 
 /*
 Hey Maheen, Gian, and Lisa,
