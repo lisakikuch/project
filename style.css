@@ -53,6 +53,40 @@
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    .card {
+        width: calc(25% - 90px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main_page_background {
+        height: auto;
+        margin-bottom: 5%;
+    }
+
+    .card {
+        height: 250px;
+        width: auto;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer .list-unstyled p {
+        margin-bottom: 0.25rem;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+    }
+}
+
 /**footer*/
 .menu-links a {
     color: #808080;
@@ -63,6 +97,15 @@
     color: #505050;
 }
 
+ HEAD
+.small-text {
+    font-size: 11px;
+    margin-top: 3%;
+}
+
+footer .list-unstyled p {
+    margin-bottom: 0.25rem;
+}
 /* Weather Cards */
 
 .content-flex {
