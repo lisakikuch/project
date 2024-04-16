@@ -48,6 +48,11 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
+$(document).ready(function() {
+    $('.card').hide().fadeIn(1000);  
+});
+
+
 /*
 Hey Maheen, Gian, and Lisa,
     here are the following sources of where I fetched the data for our website
