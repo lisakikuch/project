@@ -23,17 +23,17 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=79.38&cur
     fetchSunriseSunsetData();
     
 
-    function getCurrentWeekday() {
-        const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const currentDate = new Date();
-        const currentWeekday = weekdays[currentDate.getDay()];
-        return currentWeekday;
+function getCurrentWeekday() {
+    const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDate = new Date();
+    const currentWeekday = weekdays[currentDate.getDay()];
+    return currentWeekday;
     }
     
     // Function to update HTML element with current weekday
-    function updateCurrentWeekday() {
-        const today = getCurrentWeekday();
-        document.getElementById('current-weekday').textContent += today;
+function updateCurrentWeekday() {
+    const today = getCurrentWeekday();
+    document.getElementById('current-weekday').textContent += today;
     }
     
     // Call the function to update the HTML element with current weekday
