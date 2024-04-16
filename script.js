@@ -85,7 +85,7 @@ const locations = [
     {
         locationName: "Toronto",
         coordinates: [
-            {lad: "43.7001"},
+            {lat: "43.7001"},
             {long: "-79.4163"}
         ]
 
@@ -94,7 +94,7 @@ const locations = [
     {
         locationName: "Milton",
         coordinates: [
-            {lad: "43.5168"},
+            {lat: "43.5168"},
             {long: "-79.8829"}
         ]
     },
@@ -102,7 +102,7 @@ const locations = [
     {
         locationName: "Barrie",
         coordinates: [
-            {lad: "44.4001"},
+            {lat: "44.4001"},
             {long: "-79.6663"}
         ]
     },
@@ -110,7 +110,7 @@ const locations = [
     {
         locationName: "Ajax",
         coordinates: [
-            {lad: "43.8501"},
+            {lat: "43.8501"},
             {long: "-79.0329"}
         ]
     }
@@ -121,11 +121,12 @@ const arrayLength = locations.length;
 async function getWeather() {
     for (let i = 0; i < arrayLength; i++) {
         const cityName = locations[i].locationName;
-        const latitude = locations[i].coordinates[0].lad;
+        const latitude = locations[i].coordinates[0].lat;
         const longitude = locations[i].coordinates[1].long;
         fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,rain,wind_speed_10m&hourly=visibility`)
             .then(response => response.json())
             .then(data => {
+                // Weather Data extracted from API
                 const temperature = data.current.temperature_2m;
                 const WindSpeed = data.current.wind_speed_10m;
                 const rain = data.current.rain;
@@ -137,7 +138,7 @@ async function getWeather() {
                 document.getElementById(`currentRain${i}`).innerHTML = `<img src="icons/30 a.png"> ${rain} mm`;
                 document.getElementById(`currentVisibility${i}`).innerHTML = `<img src="icons/icons8-eye-96.png"> ${visibility} m`;
             })
-            .catch(error => console.error('Error fetching data:', error))
+            .catch(error => console.error('Error fetching data:', error));
 
         // 0.3 second delay 
         await new Promise(resolve => setTimeout(resolve, 300));
