@@ -8,19 +8,19 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=79.38&cur
     .catch(error => console.error('Error fetching data:', error))
 
     //Toronto's time for Sunrise/Sunset
-    function fetchSunriseSunsetData() {
-        fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                document.querySelector('#Time_sunrise').innerText = data.results.sunrise;
-                document.querySelector('#Time_sunset').innerText = data.results.sunset;
+function fetchSunriseSunsetData() {
+    fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            document.querySelector('#Time_sunrise').innerText = data.results.sunrise;
+            document.querySelector('#Time_sunset').innerText = data.results.sunset;
             })
-            .catch(error => console.error('Error fetching data:', error));
+        .catch(error => console.error('Error fetching data:', error));
     }
     
     // Call the function to fetch sunrise and sunset data
-    fetchSunriseSunsetData();
+fetchSunriseSunsetData();
     
 
 function getCurrentWeekday() {
