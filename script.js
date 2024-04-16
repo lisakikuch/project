@@ -117,17 +117,18 @@ const locations = [
 ]
 const arrayLength = locations.length;
 // Load Weather Data 
+// Data should be in current units (except visibility)
 async function getWeather() {
     for (let i = 0; i < arrayLength; i++) {
         const cityName = locations[i].locationName;
         const latitude = locations[i].coordinates[0].lad;
         const longitude = locations[i].coordinates[1].long;
-        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,visibility,rain,visibility,wind_speed_10m&timezone=America%2FNew_York`)
+        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,rain,wind_speed_10m&hourly=visibility`)
             .then(response => response.json())
             .then(data => {
-                const temperature = data.hourly.temperature_2m[0];
-                const WindSpeed = data.hourly.wind_speed_10m[0];
-                const rain = data.hourly.rain[0];
+                const temperature = data.current.temperature_2m;
+                const WindSpeed = data.current.wind_speed_10m;
+                const rain = data.current.rain;
                 const visibility = data.hourly.visibility[0];
                 // Manipulate da DOM
                 document.getElementById(`cityName${i}`).textContent = `${cityName}`;
