@@ -59,7 +59,7 @@
     }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .main_page_background {
         height: auto;
         margin-bottom: 5%;
@@ -85,7 +85,7 @@
     ::placeholder {
         font-size: 14px;
     }
-}
+} */
 
 /**footer*/
 .menu-links a {
