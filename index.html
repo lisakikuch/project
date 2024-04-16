@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>The Weather Company</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -35,6 +35,119 @@
         </nav>
     </header>
     
+
+    <!-- Cards Section (cannot add to the main tag because the footer overlaps it)-->
+
+    <section class="content-flex">
+        <div class="weather-content">
+            <div class="weather-container">
+                <div class="content-left">
+                  <ul class="weather-information">
+                      <li><img src="icons/sunny-cloud.png" class="icon-left"></li> <!-- Img Change fk-->
+                      <li id="currentTemp0">00℃</li>
+                      <li id="cityName0">City Name</li>
+                  </ul> 
+                </div>
+                <div class="content-right">
+                  <ul class="icons-right">
+                      <li id="currentWindSpeed0">
+                          <img src="icons/icons8-wind-90.png">
+                          10 KM
+                      </li>
+                      <li id="currentRain0">
+                          <img src="icons/30 a.png">
+                          0 %
+                      </li>
+                      <li id="currentVisibility0">
+                          <img src="icons/icons8-eye-96.png">
+                          100 %
+                      </li>
+                  </ul>
+                </div>
+            </div>
+
+            <div class="weather-container">
+                <div class="content-left">
+                  <ul class="weather-information">
+                      <li><img src="icons/cloud.png" class="icon-left"></li>
+                      <li id="currentTemp1">00℃</li>
+                      <li id="cityName1">City Name</li>
+                  </ul> 
+                </div>
+                <div class="content-right">
+                  <ul class="icons-right">
+                      <li id="currentWindSpeed1">
+                          <img src="icons/icons8-wind-90.png">
+                          10 KM
+                      </li>
+                      <li id="currentRain1">
+                          <img src="icons/30 a.png">
+                          0 %
+                      </li>
+                      <li id="currentVisibility1">
+                          <img src="icons/icons8-eye-96.png">
+                          100 %
+                      </li>
+                  </ul>
+                </div>
+            </div>
+
+
+            <div class="weather-container">
+                <div class="content-left">
+                  <ul class="weather-information">
+                      <li><img src="icons/cloud.png" class="icon-left"></li>
+                      <li id="currentTemp2">00℃</li>
+                      <li id="cityName2">City Name</li>
+                  </ul> 
+                </div>
+                <div class="content-right">
+                  <ul class="icons-right">
+                      <li id="currentWindSpeed2">
+                          <img src="icons/icons8-wind-90.png">
+                          10 KM
+                      </li>
+                      <li id="currentRain2">
+                          <img src="icons/30 a.png">
+                          0 %
+                      </li>
+                      <li id="currentVisibility2">
+                          <img src="icons/icons8-eye-96.png">
+                          100 %
+                      </li>
+                  </ul>
+                </div>
+            </div>
+
+
+            <div class="weather-container">
+                <div class="content-left">
+                  <ul class="weather-information">
+                      <li><img src="icons/cloud.png" class="icon-left"></li>
+                      <li id="currentTemp3">00℃</li>
+                      <li id="cityName3">City Name</li>
+                  </ul> 
+                </div>
+                <div class="content-right">
+                  <ul class="icons-right">
+                      <li id="currentWindSpeed3">
+                          <img src="icons/icons8-wind-90.png">
+                          10 KM
+                      </li>
+                      <li id="currentRain3">
+                          <img src="icons/30 a.png">
+                          0 %
+                      </li>
+                      <li id="currentVisibility3">
+                          <img src="icons/icons8-eye-96.png">
+                          100 %
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </div>      
+    </section>
+
     <footer class="bg-white text-dark py-4">
         <div class="container">
             <div class="row">
@@ -45,7 +158,6 @@
                         <li><a href="#">News</a></li>
                         <li><a href="https://www.theweathernetwork.com/en/maps/radar">Maps</a></li>
                     </ul>
-                    <p>&copy; 2024 Weather Company Ltd.,. All rights reserved.</p>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-unstyled">
@@ -64,6 +176,7 @@
                             <i class="bi bi-arrow-right"></i>
                         </button>
                     </div>
+                    <p class="small-text">&copy; 2024 The Weather Company Ltd.,. All rights reserved.</p>
                 </div>
             </div>
         </div>
