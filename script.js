@@ -7,6 +7,26 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=79.38&cur
     })
     .catch(error => console.error('Error fetching data:', error))
 
+    //Toronto's time for Sunrise
+fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
+    .then(response => response.json())
+    .then(data => {
+    console.log(data);
+    document.querySelector('#Time_sunrise').innerText = JSON.stringify(data.results.sunrise);
+    //Line 53 on html file
+})
+.catch(error => console.error('Error fetching data:', error))
+
+//Toronto's time for Sunset
+fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
+    .then(response => response.json())
+    .then(data => {
+    console.log(data);
+    document.querySelector('#Time_sunset').innerText = JSON.stringify(data.results.sunset);
+    //Line 60 on html file
+})
+.catch(error => console.error('Error fetching data:', error))
+
     function updateTime() {
         var currentDate = new Date(); 
         var hours = currentDate.getHours();
@@ -28,25 +48,6 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=79.38&cur
     updateTime();
     setInterval(updateTime, 1000);
 
-//Toronto's time for Sunrise
-fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
-    .then(response => response.json())
-    .then(data => {
-    console.log(data);
-    document.querySelector('#Time_sunrise').innerText = JSON.stringify(data.results.sunrise);
-    //Line 53 on html file
-})
-.catch(error => console.error('Error fetching data:', error))
-
-//Toronto's time for Sunset
-fetch('https://api.sunrisesunset.io/json?lat=43.70011&lng=-79.4163')
-    .then(response => response.json())
-    .then(data => {
-    console.log(data);
-    document.querySelector('#Time_sunset').innerText = JSON.stringify(data.results.sunset);
-    //Line 60 on html file
-})
-.catch(error => console.error('Error fetching data:', error))
 /*
 Hey Maheen, Gian, and Lisa,
     here are the following sources of where I fetched the data for our website
