@@ -76,3 +76,70 @@ API Source:
     https://sunrisesunset.io/ca/ontario/toronto/
         -this is where i get the variable data of what time Toronto's sunset & sunrise 
 */
+
+
+// code for cards
+
+// Location name and coordinates for each city
+const locations = [
+    {
+        locationName: "Toronto",
+        coordinates: [
+            {lad: "43.7001"},
+            {long: "-79.4163"}
+        ]
+
+    },
+
+    {
+        locationName: "Milton",
+        coordinates: [
+            {lad: "43.5168"},
+            {long: "-79.8829"}
+        ]
+    },
+
+    {
+        locationName: "Barrie",
+        coordinates: [
+            {lad: "44.4001"},
+            {long: "-79.6663"}
+        ]
+    },
+
+    {
+        locationName: "Ajax",
+        coordinates: [
+            {lad: "43.8501"},
+            {long: "-79.0329"}
+        ]
+    }
+]
+const arrayLength = locations.length;
+// Load Weather Data 
+async function getWeather() {
+    for (let i = 0; i < arrayLength; i++) {
+        const cityName = locations[i].locationName;
+        const latitude = locations[i].coordinates[0].lad;
+        const longitude = locations[i].coordinates[1].long;
+        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,visibility,rain,visibility,wind_speed_10m&timezone=America%2FNew_York`)
+            .then(response => response.json())
+            .then(data => {
+                const temperature = data.hourly.temperature_2m[0];
+                const WindSpeed = data.hourly.wind_speed_10m[0];
+                const rain = data.hourly.rain[0];
+                const visibility = data.hourly.visibility[0];
+                // Manipulate da DOM
+                document.getElementById(`cityName${i}`).textContent = `${cityName}`;
+                document.getElementById(`currentTemp${i}`).textContent = `${temperature}°C`;
+                document.getElementById(`currentWindSpeed${i}`).innerHTML = `<img src="icons/icons8-wind-90.png"> ${WindSpeed} km/h`;
+                document.getElementById(`currentRain${i}`).innerHTML = `<img src="icons/30 a.png"> ${rain} mm`;
+                document.getElementById(`currentVisibility${i}`).innerHTML = `<img src="icons/icons8-eye-96.png"> ${visibility} m`;
+            })
+            .catch(error => console.error('Error fetching data:', error))
+
+        // 0.3 second delay 
+        await new Promise(resolve => setTimeout(resolve, 300));
+    }
+}
+getWeather();
