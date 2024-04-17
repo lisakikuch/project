@@ -117,7 +117,6 @@ const locations = [
 ]
 const arrayLength = locations.length;
 // Load Weather Data 
-// Data should be in current units (except visibility)
 async function getWeather() {
     for (let i = 0; i < arrayLength; i++) {
         const cityName = locations[i].locationName;
