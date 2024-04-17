@@ -158,5 +158,3 @@ async function getWeather() {
     }
 }
 getWeather();
-
-// icon attribution
