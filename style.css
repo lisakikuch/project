@@ -132,6 +132,7 @@
 footer .list-unstyled p {
     margin-bottom: 0.25rem;
 }
+
 /* Weather Cards */
 
 .content-flex {
@@ -152,9 +153,14 @@ footer .list-unstyled p {
     grid-template-rows: 100%;
     grid-template-columns: 40% 60%;
     width: 100%;
-    height: 300px;
+    height: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: transform .2s;
 }
-
+.weather-container:hover {
+    transform: scale(1.05);
+}
 .content-left {
     text-align: center;
     display: flex;
@@ -190,12 +196,15 @@ footer .list-unstyled p {
     .weather-content {
         grid-template-columns: auto;
     }
+    .icons-right img {
+        width: 30%;
+    }
 }
 
 @media only screen and (max-width: 500px) {
     .weather-container {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
         grid-template-rows: 50%;
         grid-template-columns: 100%;
     }
@@ -208,11 +217,13 @@ footer .list-unstyled p {
     .content-right {
         text-align: left;
         border-radius: 0 0 30px 30px;
+        padding: 5%;
     }
     .icons-right {
-        width: 80%;
+        width: 100%;
+        font: 100%;
     }
     .icons-right img {
-        width: 20%;
+        width: 10%;
     }
 }
