@@ -84,7 +84,7 @@
         height: 250px;
     }
     }
-}
+
 @media (max-width: 1475px){
     .displayingText {
         font-size: 28px;
@@ -217,7 +217,4 @@ footer .list-unstyled p {
         width: 20%;
     }
 }
-<<<<<<< Updated upstream
-=======
- 
->>>>>>> Stashed changes
+
