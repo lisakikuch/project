@@ -81,6 +81,8 @@ API Source:
 // code for cards
 
 // Location name and coordinates for each city
+
+
 const locations = [
     {
         locationName: "Toronto",
@@ -133,18 +135,20 @@ async function getWeather() {
                 const cloudCoverage = data.current.cloud_cover;
                 const visibility = data.hourly.visibility[0];
 
-                // Change Icon depending on the cloud coverage (planning to add nested if else statements)
-                // if after the if cloud is 50, if rain == 2mm (show rain icon)
+                // Change Icon depending on the cloud coverage & rain
                 if (cloudCoverage >= 50) {
-                    weatherIcon = `<img src="icons/cloud.png" class="icon-left">`;
+                    if (rain >= 7.6) {
+                        weatherIcon = `<img src="icons/rain.png" class="icon-left">`;
+                    } else {
+                        weatherIcon = `<img src="icons/cloud.png" class="icon-left">`;
+                    }
                 } else if (cloudCoverage >= 20) {
                     weatherIcon = `<img src="icons/sunny-cloud.png" class="icon-left">`;
                 } else {
                     weatherIcon = `<img src="icons/sunny.png" class="icon-left">`;
                 }
+                // Manipulate da DOM
                 document.getElementById(`iconCondition${i}`).innerHTML = weatherIcon;
-
-                // Manipulate da DOM // make it another func?
                 document.getElementById(`cityName${i}`).textContent = `${cityName}`;
                 document.getElementById(`currentTemp${i}`).textContent = `${temperature}°C`;
                 document.getElementById(`currentWindSpeed${i}`).innerHTML = `<img src="icons/icons8-wind-90.png"> ${WindSpeed} km/h`;
