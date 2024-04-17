@@ -1,4 +1,4 @@
-fetch('https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=79.38&current=temperature_2m&hourly=temperature_2m')
+fetch('https://api.open-meteo.com/v1/forecast?latitude=43.7001&longitude=-79.4163&current=temperature_2m&hourly=temperature_2m')
     .then(response => response.json())
     .then(data => {
         console.log(data);
