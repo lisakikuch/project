@@ -61,7 +61,7 @@
         font-size: 55px;
     }   
     .card {
-        width: 300px;
+        width: 80%;
         height: 300px;
     }
 }
@@ -70,7 +70,8 @@
  @media (max-width: 768px) {
     h5 {
         font-size: 18px;
-
+    }
+}
 @media (max-width: 1475px){
     .displayingText {
         font-size: 28px;
@@ -79,7 +80,7 @@
         font-size: 58px;
     }   
     .card {
-        width: 250px;
+        width: 40%;
         height: 250px;
     }
 }
@@ -92,7 +93,7 @@
         font-size: 65px;
     }   
     .card {
-        width: 210px;
+        width: 40%;
         height: 250px;
     }
 }
@@ -105,12 +106,12 @@
         font-size: 61px;
     }   
     .card {
-        width: 205px;
+        width: 40%;
         height: 245px;
     }
 
 } 
-}
+
 
 /**footer*/
 .menu-links a {
@@ -150,7 +151,7 @@ footer .list-unstyled p {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 40% 60%;
-    width: 100%;
+    width: 80%;
     height: 300px;
 }
 
@@ -215,3 +216,7 @@ footer .list-unstyled p {
         width: 20%;
     }
 }
+<<<<<<< Updated upstream
+=======
+ 
+>>>>>>> Stashed changes
