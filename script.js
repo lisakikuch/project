@@ -113,6 +113,22 @@ const locations = [
             {lat: "43.8501"},
             {long: "-79.0329"}
         ]
+    },
+
+    {
+        locationName: "Brampton",
+        coordinates: [
+            {lat: "43.6834"},
+            {long: "-79.7663"}
+        ]
+    },
+
+    {
+        locationName: "Hamilton",
+        coordinates: [
+            {lat: "43.2501"},
+            {long: "-79.8496"}
+        ]
     }
 ]
 const arrayLength = locations.length;
