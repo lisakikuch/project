@@ -253,6 +253,10 @@ footer .list-unstyled p {
 footer .list-unstyled p {
     margin-bottom: 0.25rem;
 }
+
+.footer-backgroundcolour {
+    background-color: #98d2ff;
+}
 /* Weather Cards */
 
 .content-flex {
