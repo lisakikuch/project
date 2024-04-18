@@ -1,4 +1,4 @@
-fetch('https://api.open-meteo.com/v1/forecast?latitude=43.7001&longitude=-79.4163&current=temperature_2m&hourly=temperature_2m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum&timezone=America%2FToronto')
+fetch('https://api.open-meteo.com/v1/forecast?latitude=43.7001&longitude=-79.4163&current=temperature_2m&hourly=temperature_2m')
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -80,8 +80,7 @@ API Source:
 
 
 // code for cards
-
-// Location name and coordinates for each city
+// Locations and coordinates
 const locations = [
     {
         locationName: "Toronto",
@@ -114,25 +113,55 @@ const locations = [
             {lat: "43.8501"},
             {long: "-79.0329"}
         ]
+    },
+
+    {
+        locationName: "Brampton",
+        coordinates: [
+            {lat: "43.6834"},
+            {long: "-79.7663"}
+        ]
+    },
+
+    {
+        locationName: "Hamilton",
+        coordinates: [
+            {lat: "43.2501"},
+            {long: "-79.8496"}
+        ]
     }
 ]
 const arrayLength = locations.length;
 // Load Weather Data 
-// Data should be in current units (except visibility)
 async function getWeather() {
     for (let i = 0; i < arrayLength; i++) {
         const cityName = locations[i].locationName;
         const latitude = locations[i].coordinates[0].lat;
         const longitude = locations[i].coordinates[1].long;
-        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,rain,wind_speed_10m&hourly=visibility`)
+        fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,rain,cloud_cover,wind_speed_10m&hourly=visibility`)
             .then(response => response.json())
             .then(data => {
-                // Weather Data extracted from API
+                // Weather Data extracted from API and stored in variables
                 const temperature = data.current.temperature_2m;
                 const WindSpeed = data.current.wind_speed_10m;
                 const rain = data.current.rain;
+                const cloudCoverage = data.current.cloud_cover;
                 const visibility = data.hourly.visibility[0];
+
+                // Change Icon depending on the cloud coverage & rain
+                if (cloudCoverage >= 50) {
+                    if (rain >= 7.6) {
+                        weatherIcon = `<img src="icons/rain.png" class="icon-left">`;
+                    } else {
+                        weatherIcon = `<img src="icons/cloud.png" class="icon-left">`;
+                    }
+                } else if (cloudCoverage >= 20) {
+                    weatherIcon = `<img src="icons/sunny-cloud.png" class="icon-left">`;
+                } else {
+                    weatherIcon = `<img src="icons/sunny.png" class="icon-left">`;
+                }
                 // Manipulate da DOM
+                document.getElementById(`iconCondition${i}`).innerHTML = weatherIcon;
                 document.getElementById(`cityName${i}`).textContent = `${cityName}`;
                 document.getElementById(`currentTemp${i}`).textContent = `${temperature}°C`;
                 document.getElementById(`currentWindSpeed${i}`).innerHTML = `<img src="icons/icons8-wind-90.png"> ${WindSpeed} km/h`;
@@ -141,21 +170,8 @@ async function getWeather() {
             })
             .catch(error => console.error('Error fetching data:', error));
 
-        // 0.3 second delay 
-        await new Promise(resolve => setTimeout(resolve, 300));
+        // 0.2 second delay 
+        await new Promise(resolve => setTimeout(resolve, 200));
     }
 }
 getWeather();
-
-// About Section - scroll
-function scrollToAbout() {
-    const aboutSection = document.querySelector('#About');
-    aboutSection.scrollIntoView({ behavior: 'smooth'});
-}
-
-
-const aboutLink = document.querySelector('.nav-link[href="#About"]');
-aboutLink.addEventListener('click', function(event) {
-    event.preventDefault();
-    scrollToAbout();
-});
