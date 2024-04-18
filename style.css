@@ -142,8 +142,8 @@ footer .list-unstyled p {
 }
 .weather-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: auto auto;
+    grid-template-rows: 30% 30%;
     gap: 3%;
 }
 .weather-container {
@@ -195,7 +195,7 @@ footer .list-unstyled p {
 @media only screen and (max-width: 850px) {
     .weather-content {
         grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-rows: auto auto auto auto auto auto;
     }
     .icons-right img {
         width: 30%;
