@@ -197,6 +197,7 @@ footer .list-unstyled p {
 @media (max-width: 1475px){
     .displayingText {
         font-size: 28px;
+    }
 
 @media only screen and (max-width: 500px) {
     .weather-container {
@@ -340,3 +341,5 @@ footer .list-unstyled p {
         width: 20%;
     }
 }
+
+

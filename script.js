@@ -146,3 +146,16 @@ async function getWeather() {
     }
 }
 getWeather();
+
+// About Section - scroll
+function scrollToAbout() {
+    const aboutSection = document.querySelector('#About');
+    aboutSection.scrollIntoView({ behavior: 'smooth'});
+}
+
+
+const aboutLink = document.querySelector('.nav-link[href="#About"]');
+aboutLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    scrollToAbout();
+});
