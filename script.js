@@ -1,4 +1,4 @@
-fetch('https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=79.38&current=temperature_2m&hourly=temperature_2m')
+fetch('https://api.open-meteo.com/v1/forecast?latitude=43.7001&longitude=-79.4163&current=temperature_2m&hourly=temperature_2m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum&timezone=America%2FToronto')
     .then(response => response.json())
     .then(data => {
         console.log(data);
