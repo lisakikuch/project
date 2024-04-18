@@ -165,7 +165,7 @@ async function getWeather() {
                 document.getElementById(`cityName${i}`).textContent = `${cityName}`;
                 document.getElementById(`currentTemp${i}`).textContent = `${temperature}°C`;
                 document.getElementById(`currentWindSpeed${i}`).innerHTML = `<img src="icons/icons8-wind-90.png"> ${WindSpeed} km/h`;
-                document.getElementById(`currentRain${i}`).innerHTML = `<img src="icons/30 a.png"> ${rain} mm`;
+                document.getElementById(`currentRain${i}`).innerHTML = `<img src="icons/icons-30-a.png"> ${rain} mm`;
                 document.getElementById(`currentVisibility${i}`).innerHTML = `<img src="icons/icons8-eye-96.png"> ${visibility} m`;
             })
             .catch(error => console.error('Error fetching data:', error));
