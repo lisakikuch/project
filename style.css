@@ -94,7 +94,7 @@
     transition: color 0.3s;
 }
 .menu-links a:hover {
-    color: #505050;
+    color: lightgrey;
 }
 
  HEAD
