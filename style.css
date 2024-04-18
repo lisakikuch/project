@@ -53,7 +53,7 @@
     font-size: 65px;
 }
 
-@media (max-width: 1461px){
+@media (max-width: 1399px){
     .displayingText {
         font-size: 30px;
     }
@@ -61,61 +61,57 @@
         font-size: 55px;
     }   
     .card {
-        width: 280px;
+        width: 80%;
         height: 300px;
     }
 }
 
-@media (max-width: 1269px){
-    .displayingText {
-        font-size: 30px;
-    }
-    .displayingText_TOtemp {
-        font-size: 55px;
-    }   
-    .card {
-        width: 250px;
-        height: 300px;
+
+ @media (max-width: 768px) {
+    h5 {
+        font-size: 18px;
     }
 }
-@media (max-width: 1143px){
+@media (max-width: 1475px){
     .displayingText {
-        font-size: 30px;
+        font-size: 28px;
     }
     .displayingText_TOtemp {
-        font-size: 55px;
+        font-size: 58px;
     }   
     .card {
-        width: 240px;
+        width: 40%;
+        height: 250px;
+    }
+    }
+
+@media (max-width: 1475px){
+    .displayingText {
+        font-size: 28px;
+
+    }
+    .displayingText_TOtemp {
+        font-size: 65px;
+    }   
+    .card {
+        width: 40%;
         height: 250px;
     }
 }
-@media (max-width: 603px){
+
+@media (max-width: 500px){
     .displayingText {
-        font-size: 20px;
+        font-size: 25px;
     }
     .displayingText_TOtemp {
-        font-size: 25px;
+        font-size: 61px;
     }   
     .card {
-        width: 210px;
-        height: 210px;
+        width: 40%;
+        height: 245px;
     }
-}
 
-@media (max-width: 487px){
-    .displayingText {
-        font-size: 20px;
-    }
-    .displayingText_TOtemp {
-        font-size: 25px;
-    }   
-    .card {
-        width: 180px;
-        height: 180px;
-    }
-}
-
+} 
 
 
 /**footer*/
@@ -339,4 +335,5 @@ footer .list-unstyled p {
     .icons-right img {
         width: 20%;
     }
+}
 }
