@@ -273,3 +273,7 @@ footer .list-unstyled p {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.footer-background {
+    background-color: #9fd3f4 !important;
+}
