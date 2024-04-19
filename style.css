@@ -114,25 +114,6 @@
 } 
 
 
-/**footer*/
-.menu-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-.menu-links a:hover {
-    color: lightgrey;
-}
-.small-text {
-    font-size: 11px;
-    margin-top: 3%;
-}
-
-footer .list-unstyled p {
-    margin-bottom: 0.10rem;
-}
-
-
 /* Weather Cards */
 .content-flex {
     display: flex;
@@ -236,4 +217,59 @@ footer .list-unstyled p {
     }
 }
 
+/**footer*/
+/* .menu-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.menu-links a:hover {
+    color: lightgrey;
+}
+.small-text {
+    font-size: 11px;
+    margin-top: 3%;
+}
 
+footer .list-unstyled p {
+    margin-bottom: 0.10rem;
+} */
+
+.menu-links a {
+    color: rgb(48, 47, 47);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.menu-links a:hover {
+    color: grey;
+}
+
+.small-text {
+    font-size: 11px;
+    margin-top: 3%;
+}
+
+footer .list-unstyled p {
+    margin-bottom: 0.25rem;
+}
+
+.footer-color {
+    background-color: rgb(178, 221, 244);
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#go-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #079dfb;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

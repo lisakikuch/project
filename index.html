@@ -15,19 +15,22 @@
     <header id="homepage">
         <nav class="navbar navbar-expand-lg navbar-white bg-white">
             <div class="container"> 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="https://s3-alpha-sig.figma.com/img/b44a/2bd6/b87000fb52fed5d6254914c02bac48d0?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QnfwaSYBcrm~jljR7doIdTEkHCJn9vPd-IHT1BW8Fm0r3VMrfs2utjS7ie1gBRSW6TAY-nZNVznRVm1-NDiPp16aMgoBl2SVluI1ihW7jjXsph6BfhpYA4sbVh8IuxUlmEoVsxJ76IzZmd-UMYKdA6PaN~kW4cu3kHkPxmXz27tks9cO9yTA0nqgz~IzNaQxfrkYoMB00STR9alJAa7Fk0-nwZg3Kr-sgSTf6NZPMnwdxa1WWTA-~C46j~fblWRnepEC51Uf6pOku1w5jzweCodxTG3fjtjCvIRppsAvoYYEUEpXliUBtw7rKA5j9G0BY5L50G7v4KrEuwXl35fyXA__" width="50" height="50" alt="The Weather Company">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse">
-                    <div class="navbar-nav ms-auto"> 
-                        <a class="nav-item nav-link" href="#">Home</a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav ms-auto">
+                      <!--End-->
+                        <a class="nav-item nav-link" href="index.html">Home</a>
                         <a class="nav-item nav-link" href="#cities">Cities</a>
                         <a class="nav-item nav-link" href="https://www.weathercompany.com/news/">News</a>
                         <a class="nav-item nav-link" href="https://weather.com/maps/currentusweather">Maps</a>
-                        <a class="nav-item nav-link" href="#" onclick="scrollToAbout()">About</a>
+                        <a class="nav-item nav-link" href="#about">About</a>
                     </div>
                 </div>
             </div>
@@ -221,15 +224,39 @@
             </div>
         </div>      
     </section>
+    <section id="about" class="About">
+    <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-md-6" style="padding-left: 50px; padding-right: 5px;">
+            <div style="max-width: 90%;">
+            <h2 style="text-align: left">About</h2>
+            <p style="text-align: left; margin-bottom: 15px;">Welcome to <b>The Weather Company</b>, your reliable source for accurate and up-to-date weather forecasts in the Greater Toronto Area (GTA). Our team has to create a user-friendly platform that caters to the diverse weather needs of both residents and visitors.</p>
+            
+            <h5 style="text-align: left;">Features</h5>
+            <ul class="service-list" style="text-align: left;">
+                <li>Hourly Forecasts - Get detailed weather insights  including temperature variations, precipitation chances, wind speeds, and more. </li>
+                <br>
+                <li>Stay Updated - Subscribe to our newsletter to get regular weather updates delivered to your inbox!</li>
+                <br>
+                <li>Plan Ahead - Utilize this website to plan ahead and stay prepared for changing weather conditions.</li>
+            </ul>
+        </div>
+        </div>
+          <div class="col-md-6" style="padding-bottom: 50px;">
+            <img src="about-img.jpg" class="fluid-image" style="width: 102%; height: 100%; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="bg-white text-dark py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <ul class="list-unstyled menu-links">
                         <h5>Menu</h5>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="#cities">Cities</a></li>
-                        <li><a href="#About" onclick="scrollToAbout()">About</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="https://www.weathercompany.com/news/">News</a></li>
                         <li><a href="https://weather.com/maps/currentusweather">Maps</a></li>
                     </ul>
@@ -268,6 +295,7 @@
                 </a>
             </div>
         </div>
+        <a href="#" id="go-up">Go Up</a>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
