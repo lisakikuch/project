@@ -175,3 +175,16 @@ async function getWeather() {
     }
 }
 getWeather();
+
+//For Go Up bottom
+
+const goUpButton = document.getElementById("go-up");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            goUpButton.style.display = "block";
+        } else {
+            goUpButton.style.display = "none";
+        }
+    };
