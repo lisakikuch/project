@@ -188,3 +188,7 @@ const goUpButton = document.getElementById("go-up");
             goUpButton.style.display = "none";
         }
     };
+    goUpButton.onclick = function() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0;
+    }
