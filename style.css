@@ -123,7 +123,7 @@
 .weather-content {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 30% 30%;
+    grid-template-rows: 30%;
     gap: 25px;
     margin: 0%;
 }
